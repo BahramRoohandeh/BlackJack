@@ -15,8 +15,7 @@ class Card:
 
     def __str__(self):
         return self.rank +' of '  + self.suit
-
-
+#---------------------------------------------------------------------
 
 class Deck:
     def reset(self):
@@ -31,8 +30,7 @@ class Deck:
 
     def deal(self):
         return self.decks.pop()
-
-
+#----------------------------------------------------------------------
 
 class Hand():
 
@@ -53,7 +51,7 @@ class Hand():
         while self.cards_value> 21 and self.aces > 0 :
             self.cards_value-= 10
             self.aces -=1
-
+#-------------------------------------------------------------------------
 
 def some_show(player_ , computer_):
     print('computer hand is :')
@@ -65,7 +63,7 @@ def some_show(player_ , computer_):
     print(f'2nd :{player_.hand[1].__str__() }')
     print(player_.cards_value)
     print('------------------------------')
-
+#--------------------------------------------------------------------------
 
 def show_all(computer_):
     for i in range(len(computer_.hand)):
